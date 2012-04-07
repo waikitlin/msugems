@@ -1,0 +1,10 @@
+Project name: MSU GEMS
+Main idea: Manage GEMS
+Scope:
+(v1)
+- add GEMS
+- edit GEMS
+- schedule GEMS
+- remind scheduled GEMS (email)
+- days to go scheduled GEMS (countdown)
+- GEMS to fulfillment
