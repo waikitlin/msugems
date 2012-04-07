@@ -13,6 +13,7 @@ if (isset($_SESSION['username'])) {
     <head>
         <title>MSU GEMS</title>
         <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+        <link rel="shortcut icon" href="stylesheets/images/favicon.ico">
     </head>
     <body>
         <h3>Sign up here!</h3>
