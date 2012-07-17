@@ -3,8 +3,8 @@
 session_start();
 
 // Check, if username session is NOT set then this page will jump to login page
-if (!isset($_SESSION['username'])) {
-    header('Location: index.php');
+if (!isset($_SESSION['email'])) {
+    header('Location: ../login');
 }
 ?>
 
@@ -14,6 +14,7 @@ if (!isset($_SESSION['username'])) {
         <title>Create Event</title>
     </head>
     <body>
+        <p><a href="../login">Home</a></p>
         <form action="eventverify.php" method="post">
             <table>
                 <tr><td>Event Name <input name="event_name" type="text" value="" size="50" maxlength="255" /></td>
@@ -28,6 +29,5 @@ if (!isset($_SESSION['username'])) {
                 <tr><td><input type="submit" value="Create" /></td></tr>
             </table>
         </form>
-        <p><a href="http://localhost:8080/msugems/securedpage.php">Go back</a></p>
     </body>
 </html>

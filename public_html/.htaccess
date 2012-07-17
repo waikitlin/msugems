@@ -1,0 +1,2 @@
+RedirectMatch permanent ^/msugems/public_html/$ http://localhost:8080/msugems/public_html/login
+Options -Indexes

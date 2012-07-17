@@ -1,32 +1,33 @@
 <?php
+
 //***bug:takes user to securedpage without signing in
 // Initialize session
 session_start();
 
 // Include database connection settings
-include('config.inc.php');
+require_once('../../res/config/config.php');
 
-// Define $myusername and $mypassword 
-$myusername = $_POST['username'];
+// Define $myusername and $mypassword
+$myemail = $_POST['email'];
 $mypassword = $_POST['password'];
 
 // To protect MySQL injection (more detail about MySQL injection)
-$myusername = stripslashes($myusername);
+$myemail = stripslashes($myemail);
 $mypassword = stripslashes($mypassword);
-$myusername = mysql_real_escape_string($myusername);
+$myemail = mysql_real_escape_string($myemail);
 $mypassword = mysql_real_escape_string($mypassword);
 
-$sql = "SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
+$sql = "SELECT * FROM $tbl_name WHERE email='$myemail' and password='$mypassword'";
 $login = mysql_query($sql);
 
 // Check username and password match
 if (mysql_num_rows($login) == 1) {
     // Set username session variable
-    $_SESSION['username'] = $myusername;
+    $_SESSION['email'] = $myemail;
     // Jump to secured page
-    header('Location: securedpage.php');
+    header('Location: ../home/');
 } else {
     // Jump to login page
-    header('Location: index.php?login_attempt=true');
+    header('Location: login.php?login_attempt=true');
 }
 ?>

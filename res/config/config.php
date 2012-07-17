@@ -12,5 +12,4 @@ mysql_select_db("$db_name") or die("cannot select DB");
 
 //MYSQL ERROR CODE
 $ER_DUP_ENTRY = 1062;
-
 ?>

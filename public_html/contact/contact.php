@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
+        <p><a href="../login">Home</a></p>
         <div>Feel free to contact me at</div>
         <script type="text/javascript">
             var username = "linwaikit";

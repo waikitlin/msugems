@@ -1,11 +1,11 @@
 <?php
+
 // Include database connection settings
 $host = "mysql1.000webhost.com"; // Host name 
 $username = "a1816572_myuser"; // Mysql username 
 $password = "aa865582"; // Mysql password 
 $db_name = "a1816572_mydb"; // Database name 
 $tbl_name = "user"; // Table name 
-
 // Connect to server and select databse.
 mysql_connect("$host", "$username", "$password") or die("cannot connect");
 mysql_select_db("$db_name") or die("cannot select DB");
